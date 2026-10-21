@@ -42,7 +42,7 @@ The service's own entry file registers its start and stop handlers under the nam
 | `checkManifest(toml, id)` | The list of manifest pieces still missing, empty when the block is complete |
 | `MENU_TOAST`, `SIMPLE_TOAST`, `TOAST_TEMPLATES` | The template names that draw |
 
-The icon must be an `http(s)` URL: the renderer is another process and draws a remote icon, while a package path or a data URI is left blank.
+The icon must be an `https` URL: the renderer is another process that fetches the icon itself over https; a cleartext `http` URL, a package path or a data URI is left blank.
 
 ## Tests
 
