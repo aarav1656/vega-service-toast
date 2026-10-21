@@ -1,0 +1,22 @@
+# Paste into the app's manifest.toml. Replace com.example.app with your package id.
+
+[[components.service]]
+id = "com.example.app.toast.service"
+runtime-module = "/com.amazon.kepler.runtime.react_native_kepler_4@IReactNativeKepler_0"
+launch-type = "singleton"
+
+[[processes.group]]
+id = "toast_service"
+component-ids = ["com.example.app.toast.service"]
+
+[[wants.service]]
+id = "com.example.app.toast.service"
+
+[[wants.privilege]]
+id = "com.amazon.notification.privilege.post"
+
+[[needs.module]]
+id = "/com.amazon.kepler.headless_task_manager_1@IHeadlessTaskManager_2"
+
+[[offers.service]]
+id = "com.example.app.toast.service"

@@ -1,0 +1,55 @@
+schema-version = 1
+
+[package]
+title = "Toast Example"
+version = "0.1.0"
+id = "com.example.toast"
+
+[os.version]
+min = "1.2"
+target = "1.2"
+
+[components]
+[[components.interactive]]
+id = "com.example.toast.main"
+runtime-module = "/com.amazon.kepler.runtime.react_native_kepler_4@IReactNativeKepler_0"
+launch-type = "singleton"
+categories = ["com.amazon.category.main"]
+
+[[components.service]]
+id = "com.example.toast.service"
+runtime-module = "/com.amazon.kepler.runtime.react_native_kepler_4@IReactNativeKepler_0"
+launch-type = "singleton"
+
+[processes]
+[[processes.group]]
+id = "main"
+component-ids = ["com.example.toast.main"]
+
+[[processes.group]]
+id = "toast_service"
+component-ids = ["com.example.toast.service"]
+
+[wants]
+[[wants.service]]
+id = "com.example.toast.service"
+
+[[wants.privilege]]
+id = "com.amazon.notification.privilege.post"
+
+[needs]
+[[needs.module]]
+id = "/com.amazon.vega.os@IVega_1_2"
+
+[[needs.module]]
+id = "/com.amazon.kepler.headless_task_manager_1@IHeadlessTaskManager_2"
+
+[[needs.module]]
+id = "/com.amazon.kepler.keplerscript_4@IKeplerScript_0"
+
+[offers]
+[[offers.service]]
+id = "com.example.toast.service"
+
+[[offers.interaction]]
+id = "com.example.toast.main"
