@@ -10,10 +10,10 @@ import {buildToast, postToast} from 'vega-service-toast';
 await postToast(
   buildToast({
     title: 'Cavaliers at Knicks is coming down to the wire',
-    description: '4th quarter, 4:09 left. Press Menu to open Clutch.',
+    description: '4th quarter, 4:09 left. Press Menu to open Close One.',
     iconUri: 'https://clutch.example.com/assets/clutch-icon.png',
     launchUri: 'pkg://com.clutch.tv.main',
-    launchTitle: 'Open Clutch',
+    launchTitle: 'Open Close One',
   }),
 );
 ```
@@ -55,7 +55,7 @@ npm test    # build, 15 tests, then 13 mutations of the recipe that must each tu
 
 ## Used by
 
-Clutch, the Fire TV entry that cues a household when a game they follow turns into a one possession finish. Its service posts through this recipe.
+Close One, the Fire TV entry that cues a household when a game they follow turns into a one possession finish. Its service posts through this recipe.
 
 ## License
 

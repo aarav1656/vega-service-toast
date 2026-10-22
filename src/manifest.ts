@@ -8,7 +8,7 @@ const rows = (v: unknown): Rows => (Array.isArray(v) ? (v as Rows) : []);
 const ids = (v: unknown): string[] => rows(v).map(r => String(r.id));
 
 /**
- * The pieces of manifest.toml a toast-raising service needs, as the working Clutch service ships them.
+ * The pieces of manifest.toml a toast-raising service needs, as the working Close One service ships them.
  * Returns what is missing; an empty list means the manifest carries the whole block.
  */
 export function checkManifest(toml: string, serviceId: string): string[] {
