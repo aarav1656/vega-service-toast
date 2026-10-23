@@ -10,8 +10,8 @@ import {buildToast, postToast} from 'vega-service-toast';
 await postToast(
   buildToast({
     title: 'Cavaliers at Knicks is coming down to the wire',
-    description: '4th quarter, 4:09 left. Press Menu to open Close One.',
-    iconUri: 'https://clutch.example.com/assets/clutch-icon.png',
+    description: 'Coming down to the wire. 4th quarter, 4:09 left.',
+    iconUri: 'https://raw.githubusercontent.com/aarav1656/close-one/main/server/assets/clutch-icon.png',
     launchUri: 'pkg://com.clutch.tv.main',
     launchTitle: 'Open Close One',
   }),
